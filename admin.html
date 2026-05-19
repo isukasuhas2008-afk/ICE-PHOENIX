@@ -1,0 +1,65 @@
+<!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Admin | Ice Phoenix</title>
+      <link rel="stylesheet" href="style.css" />
+      <script defer src="script.js"></script>
+    </head>
+    <body data-page="admin">
+      <header class="nav">
+        <div class="wrap nav-inner">
+          <a class="brand" href="index.html">
+            <img src="assets/logo.png" alt="Ice Phoenix logo" />
+            <div>
+              <strong>Ice Phoenix</strong>
+              <span>the conqueror of graphics</span>
+            </div>
+          </a>
+          <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="services.html">Services</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+<main class="wrap admin-lock">
+  <div class="lock-card" id="gate">
+    <div class="badge">Private Access</div>
+    <h1 style="font-size:clamp(2rem,4vw,3.3rem);margin-top:14px">Admin Panel</h1>
+    <p class="small">This page is not linked in the main menu. Enter the password to unlock editable fields for homepage text and pricing values.</p>
+    <div class="form" style="margin-top:18px">
+      <input id="password" type="password" placeholder="Password" />
+      <button class="btn primary" id="unlockBtn" type="button">Unlock</button>
+      <div id="status" class="notice">Locked.</div>
+    </div>
+  </div>
+
+  <div class="lock-card hidden" id="panel">
+    <div class="badge">Editable Content</div>
+    <h2 style="margin-top:14px">Update site text</h2>
+    <div class="form">
+      <input id="logoText" placeholder="Brand text" value="Ice Phoenix" />
+      <input id="heroTitle" placeholder="Hero title" value="Ice Phoenix" />
+      <textarea id="heroLead" placeholder="Hero description">Premium graphic design for logos, social media, posters, branding kits, and custom visuals.</textarea>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px">
+        <input id="p1" placeholder="Starter price" value="2500" />
+        <input id="p2" placeholder="Brand price" value="6500" />
+        <input id="p3" placeholder="Premium price" value="12000" />
+        <input id="p4" placeholder="Custom price" value="18000" />
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <button class="btn primary" id="saveBtn" type="button">Save in browser</button>
+        <button class="btn" id="resetBtn" type="button">Reset</button>
+      </div>
+      <div id="status" class="notice">Saved changes stay on this device in this browser.</div>
+    </div>
+  </div>
+</main>
+
+    </body>
+    </html>
